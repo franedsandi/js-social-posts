@@ -35,8 +35,7 @@ console.log() è nostro amico.
 Quando un pezzo di codice funziona, chiediamoci se possiamo scomporlo in funzioni più piccole.
 ===
 **Step by step:**
-1. con foreach stampare ogni post con la base del html in forma generica e poi aggiungere i datti specifici 
-2. 
+
 ===
 **Bonus step by step:**
 1. formattare le date in Italian language
