@@ -35,17 +35,8 @@ console.log() è nostro amico.
 Quando un pezzo di codice funziona, chiediamoci se possiamo scomporlo in funzioni più piccole.
 ===
 **Step by step:**
-1. Creazione dell'array con i dati dei posts
-2. prendere il disegno della card di bootstrap
-3. iterare l'array ed inserire ogni elemento nel DOM
-4. salvare gli elementi nella variabile cardsContainer
-5. mettere dentro cardsContainer il contenuto delle cards create
-6. utilizzare console.log(cardsContainer); per vedere cosa ha generato
-7. aggiungere all'HTML il nuovo div appena creato
-8. fare click sul bottone "Like"
-9. quando clicchi su Like, cambia lo stato del pulsante
-10. aggiornare il valore degli hearts corrispondenti
-11. non permetterci di toccare il tasto multiple volte (remove event listener)
+1. con foreach stampare ogni post con la base del html in forma generica e poi aggiungere i datti specifici 
+2. 
 ===
 **Bonus step by step:**
 1. formattare le date in Italian language
