@@ -63,4 +63,7 @@ posts.sort((a, b) => { ... });: This line calls the sort method on the posts arr
 const dateA = new Date(a.created); and const dateB = new Date(b.created);: These lines create JavaScript Date objects from the created date strings of two posts, a and b. This allows us to compare the dates and determine their order.
 
 return dateB - dateA;: In the comparison function, we subtract dateA from dateB. This subtraction is crucial for sorting in descending order. When dateB (the date of the second post) is later than dateA (the date of the first post), the result is positive, indicating that b should come before a. This results in the array being sorted from newest to oldest, as posts with later dates will appear earlier in the sorted array.
+===
+**Coments**
+the HTML post format and the JS aray were already made , just worked on the funtionality, not the design (lovely to know an our earlier...)
 
