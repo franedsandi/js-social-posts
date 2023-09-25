@@ -57,10 +57,10 @@
         }
     ];
     const container = document.querySelector(".container");
-
+/* print post */
     posts.forEach((post, index) => {
         const postHTML = `
-            <div class="post my-5">
+            <div class="post my-5" data-postid="${post.id}">
                 <div class="post__header">
                     <div class="post-meta">
                         <div class="post-meta__icon">
@@ -92,4 +92,37 @@
             </div>
         `;
         container.innerHTML += postHTML;
-    })
+    });
+    
+    // get the like button
+    const likeButtons = document.querySelectorAll(".like-button");
+    
+    // event listener for the like button
+    likeButtons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+            // find the post asociated to the like button pressed
+            const postId = button.getAttribute("data-postid");
+            const post = document.querySelector(`.post[data-postid="${postId}"]`);
+    
+            // check the class of the button
+            const isLiked = button.classList.contains("like-button--liked");
+    
+            // get the liked counter of the post
+            const likeCounter = post.querySelector(`#like-counter-${postId}`);
+    
+            // like or unlike
+            if (isLiked) {
+                // unlike
+                posts.find((p) => p.id === parseInt(postId)).likes--;
+                button.classList.remove("like-button--liked");
+            } else {
+                // like
+                posts.find((p) => p.id === parseInt(postId)).likes++;
+                button.classList.add("like-button--liked");
+            }
+    
+            // updated like counter
+            likeCounter.textContent = posts.find((p) => p.id === parseInt(postId)).likes;
+        });
+    });
+
