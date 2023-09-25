@@ -57,6 +57,16 @@ const posts = [
     }
 ];
 /**********
+** EXTRA **
+**********/
+
+// organize the posts by created date in descending order (newest to oldest)
+posts.sort((a, b) => {
+    const dateA = new Date(a.created);
+    const dateB = new Date(b.created);
+    return dateB - dateA;
+});
+/**********
  functions 
  *********/
 
@@ -129,7 +139,7 @@ const likeButtons = document.querySelectorAll(".like-button");
 // event listener for each like button
 likeButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
-        // link the like button wwwith the post
+        // link the like button with the post
         const postId = button.getAttribute("data-postid");
         const post = document.querySelector(`.post[data-postid="${postId}"]`);
 

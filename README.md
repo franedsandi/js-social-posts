@@ -35,9 +35,32 @@ console.log() è nostro amico.
 Quando un pezzo di codice funziona, chiediamoci se possiamo scomporlo in funzioni più piccole.
 ===
 **Step by step:**
-
+1. print the given html card in js in the most generic way to add the array info
+2. use a for each to add an event listener to esch like buton
+3. asociate the like button to the post
+4. modify the likes counter when the button is clicked
+5. modify the like button when is clicked
+6. if like button is liked, when reclick , unlike -----> check if the button have been pressed , if it true then unlike, if false then like
+7. update the like counter
+8. create a funtion to split the american stile date and reorganize it in the italian style
+9. change the print so it will show the new date format (italian)
+10. create a funtion to pic the initials of the name based in the parts of the name (name and last name), picking from the word 0 the char 0 and from the word 1 the char 0
+11. if profile have a picture, display picture, if not , display initials (profileImageOrInitials)
 ===
-**Bonus step by step:**
-1. formattare le date in Italian language
-2. if picture = null -----> picture = name first letter
-3. like button : first click like +1, second click unlike (-1)
+**EXTRA**
+Organize post by created datE (newest to oldest)
+**************************************
+posts.sort((a, b) => {
+    const dateA = new Date(a.created);
+    const dateB = new Date(b.created);
+    return dateB - dateA;
+});
+**************************************
+This code is sorting the posts array by the created date in descending order (from newest to oldest) using the sort method and a custom comparison function. Here's an explanation of each part:
+
+posts.sort((a, b) => { ... });: This line calls the sort method on the posts array and provides a comparison function as an argument. The comparison function is used to determine the order in which the elements should be sorted.
+
+const dateA = new Date(a.created); and const dateB = new Date(b.created);: These lines create JavaScript Date objects from the created date strings of two posts, a and b. This allows us to compare the dates and determine their order.
+
+return dateB - dateA;: In the comparison function, we subtract dateA from dateB. This subtraction is crucial for sorting in descending order. When dateB (the date of the second post) is later than dateA (the date of the first post), the result is positive, indicating that b should come before a. This results in the array being sorted from newest to oldest, as posts with later dates will appear earlier in the sorted array.
+
