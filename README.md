@@ -48,7 +48,7 @@ Quando un pezzo di codice funziona, chiediamoci se possiamo scomporlo in funzion
 11. if profile have a picture, display picture, if not , display initials (profileImageOrInitials)
 ===
 **EXTRA**
-Organize post by created datE (newest to oldest)
+Organize post by created date (newest to oldest)
 **************************************
 posts.sort((a, b) => {
     const dateA = new Date(a.created);
