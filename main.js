@@ -121,11 +121,11 @@ posts.forEach((post, index) => {
                     <div class="likes__cta">
                         <a class="like-button js-like-button" href="#" data-postid="${post.id}">
                             <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
-                            <span class="like-button__label">Me gusta</span>
+                            <span class="like-button__label">Mi piace</span>
                         </a>
                     </div>
                     <div class="likes__counter">
-                        Le gusta a <b id="like-counter-${post.id}" class="js-likes-counter">${post.likes}</b> personas
+                        Le piace a <b id="like-counter-${post.id}" class="js-likes-counter">${post.likes}</b> persone
                     </div>
                 </div>
             </div>
