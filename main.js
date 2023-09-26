@@ -139,6 +139,8 @@ const likeButtons = document.querySelectorAll(".like-button");
 // event listener for each like button
 likeButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
+        // cancel refresh
+        event.preventDefault(); 
         // link the like button with the post
         const postId = button.getAttribute("data-postid");
         const post = document.querySelector(`.post[data-postid="${postId}"]`);
